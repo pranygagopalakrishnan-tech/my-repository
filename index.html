@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GitHub Workshop 2026</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0d1117;
+        color: white;
+        line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    header {
+        background-color: #161b22;
+        padding: 20px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header h2 {
+        color: #58a6ff;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #58a6ff;
+    }
+
+    /* Home Section */
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #161b22, #0d1117);
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .hero span {
+        color: #58a6ff;
+    }
+
+    .hero p {
+        font-size: 18px;
+        color: #c9d1d9;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #238636;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #2ea043;
+        transform: translateY(-2px);
+    }
+
+    /* General Sections */
+    section {
+        padding: 60px 8%;
+        text-align: center;
+    }
+
+    section h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+        color: #58a6ff;
+    }
+
+    /* About Section */
+    .about p {
+        max-width: 750px;
+        margin: auto;
+        color: #c9d1d9;
+        font-size: 17px;
+    }
+
+    /* Topics Section */
+    .topics {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        padding: 25px;
+        border-radius: 10px;
+        width: 250px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #58a6ff;
+    }
+
+    .card h3 {
+        margin-bottom: 12px;
+        color: #58a6ff;
+    }
+
+    .card p {
+        color: #c9d1d9;
+    }
+
+    /* Schedule Section */
+    .schedule {
+        max-width: 600px;
+        margin: auto;
+        background-color: #161b22;
+        padding: 25px;
+        border-radius: 10px;
+        border: 1px solid #30363d;
+    }
+
+    .schedule p {
+        padding: 12px;
+        border-bottom: 1px solid #30363d;
+    }
+
+    .schedule p:last-child {
+        border-bottom: none;
+    }
+
+    /* Meme Section */
+    .meme-card {
+        max-width: 550px;
+        margin: auto;
+        padding: 25px;
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(88, 166, 255, 0.15);
+    }
+
+    .meme-card img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .meme-card h3 {
+        color: #58a6ff;
+        margin-bottom: 10px;
+    }
+
+    .meme-card p {
+        margin: 10px 0;
+        color: #c9d1d9;
+    }
+
+    .meme-caption {
+        font-style: italic;
+    }
+
+    #joke {
+        color: #58a6ff;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #161b22;
+        padding: 25px;
+        text-align: center;
+        color: #c9d1d9;
+        border-top: 1px solid #30363d;
+    }
+
+    /* Mobile Design */
+    @media (max-width: 600px) {
+        .hero {
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+        }
+
+        header {
+            flex-direction: column;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        section h2 {
+            font-size: 26px;
+        }
+    }
+</style>
+
+</head><body><!-- Navigation Bar -->
+<header>
+    <h2>💻 GitHub Workshop</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#meme">Memes 😂</a>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<section class="hero" id="home">
+
+    <h1>Learn. Code. <span>Collaborate.</span></h1>
+
+    <p>
+        Explore Git and GitHub and take your first step
+        into the world of open-source development.
+    </p>
+
+    <a href="#topics" class="btn">Explore Workshop</a>
+
+    <a href="#schedule" class="btn">View Schedule</a>
+
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+
+    <h2>About the Workshop</h2>
+
+    <p>
+        Welcome to our GitHub Workshop! This workshop is designed
+        for students and beginners who want to learn how developers
+        manage code, track changes, and collaborate on projects.
+        Through practical learning, you will discover how to create
+        repositories, upload your projects, and publish your own
+        website using GitHub Pages.
+    </p>
+
+</section>
+
+<!-- Topics Section -->
+<section id="topics">
+
+    <h2>What You Will Learn 🚀</h2>
+
+    <div class="topics">
+
+        <div class="card">
+            <h3>🔧 Git Basics</h3>
+            <p>
+                Learn version control, commits, branches,
+                and how to track changes in your code.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🐙 GitHub Essentials</h3>
+            <p>
+                Create repositories, upload projects,
+                and manage your code online.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌐 GitHub Pages</h3>
+            <p>
+                Publish your HTML website online
+                and share it with everyone.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🤝 Open Source</h3>
+            <p>
+                Understand pull requests, issues,
+                and collaboration with other developers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Schedule Section -->
+<section id="schedule">
+
+    <h2>Workshop Schedule 📅</h2>
+
+    <div class="schedule">
+
+        <p><strong>Session 1:</strong> Introduction to Git</p>
+
+        <p><strong>Session 2:</strong> Creating GitHub Repositories</p>
+
+        <p><strong>Session 3:</strong> Hands-on Coding</p>
+
+        <p><strong>Session 4:</strong> Publishing a Website</p>
+
+        <p><strong>Final Session:</strong> Questions and Answers</p>
+
+    </div>
+
+</section>
+
+<!-- Meme Section -->
+<section id="meme">
+
+    <h2>😂 Developer Meme Zone</h2>
+
+    <div class="meme-card">
+
+        <img
+            src="https://placehold.co/500x300/161b22/58a6ff?text=IT+WORKS+ON+MY+MACHINE"
+            alt="Developer meme: It works on my machine"
+        >
+
+        <h3>When your code works perfectly on your laptop...</h3>
+
+        <p>But fails on your friend's computer! 💀</p>
+
+        <p class="meme-caption">
+            Developer's favorite excuse:
+            "But it works on my machine!" 😂
+        </p>
+
+        <button class="btn" onclick="showJoke()">
+            Get Another Dev Joke 🤣
+        </button>
+
+        <p id="joke" aria-live="polite"></p>
+
+    </div>
+
+</section>
+
+<!-- Registration / Call to Action -->
+<section id="register">
+
+    <h2>Ready to Start Your Coding Journey?</h2>
+
+    <p>
+        Learn new skills, build projects, and become a part
+        of the developer community!
+    </p>
+
+    <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn"
+    >
+        Explore GitHub
+    </a>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <p>© 2026 GitHub Workshop | Learn, Build, Collaborate</p>
+
+    <p>Created with ❤️ by Future Engineers</p>
+
+</footer>
+
+<!-- JavaScript for Developer Jokes -->
+<script>
+    function showJoke() {
+
+        const jokes = [
+            "Why do programmers prefer dark mode? Because light attracts bugs! 🐛",
+
+            "I have a joke about Git, but I haven't committed to it yet! 😂",
+
+            "My code has no bugs. Just unexpected features! 💀",
+
+            "99 little bugs in the code... fix one, 127 bugs in the code! 🤣",
+
+            "Keep calm and git push! 🚀",
+
+            "There are 10 types of people: those who understand binary and those who don't! 🤓",
+
+            "A programmer's favorite place? The Foo Bar! 😂"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * jokes.length);
+
+        document.getElementById("joke").textContent =
+            jokes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
